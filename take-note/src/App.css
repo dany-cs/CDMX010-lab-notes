@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.principal{
+  background-color: rgb(247 247 247 /47%);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+}
+
+.secundario {
+  background-color:white;
+  padding: 10px 20px;
+  margin: 20% auto;
+  position: relative;
+  width: 440px;
+  height: 255px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  border: solid yellow;
+  box-shadow: 7px 6px 9px 4px grey;
+}
+.secundario input{
+  border: none;
+  height: 35px;
+  outline: none;
+}
+.secundario textarea{
+  border: none;
+  height: 50px;
+  outline: none;
+}
+#principal:target{
+  opacity:1;
+  pointer-events: auto;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
