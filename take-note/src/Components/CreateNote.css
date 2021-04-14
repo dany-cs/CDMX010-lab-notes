@@ -1,0 +1,29 @@
+.takeNote {
+    background-color:white;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+    width: 440px;
+    height: 255px;
+    display: flex;
+    flex-flow: column;
+    border: solid yellow;
+    box-shadow: 7px 6px 9px 4px grey;
+  }
+  .formNote{
+    border: solid rgb(0, 238, 255);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  .takeNote input{
+    border: none;
+    height: 35px;
+    outline: none;
+    text-align: center;
+  }
+  .takeNote textarea{
+    border: none;
+    height: 150px;
+    outline: none;
+  }
