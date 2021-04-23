@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&family=Roboto:wght@500&display=swap');
+
+.register{
+    margin-top: 0px;
+    background-image: url(../../image/fondoRegister.png);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+}
+.register h1{
+    font-family: 'Ribeye Marrow', cursive;
+    position: relative;
+    left: 304px;
+    font-size: 59px;
+    margin-top: -10px;
+    color: #831A6C;
+    text-shadow:3px -4px 0px   rgba(203, 121, 198, 0.55);
+
+}
+.logoform{ 
+    width: 230px;
+    height: 230px;
+    right: -80px;
+    margin-top: 39px;
+    transform: rotate(-30deg);
+    position: relative;
+}
+.formDad{
+    width: 100%;
+    height: 300px;
+    margin-top: 8px
+}
+.registerimg{
+    width: 93%;
+    height: 581px;
+    right: -21px;
+    position: relative;
+}
+.formChildren{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-top: -476px;
+    width: 59%;
+    right: 140px;
+}
+.formChildren input{
+    outline: none;
+    font-family:'Roboto', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    width: 90%;
+    height: 57px;
+    margin: 16px;
+    border: solid  #A3CA50;
+    border-radius: 20px 20px;
+
+}
+.buttonForm{
+    outline: none;
+    font-family:'Roboto', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    background-color: #FDEB01;
+    border: dashed #A3CA50;
+    width: 55%;
+    height: 57px;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    border-radius: 20px 20px;
+}
+.buttonForm:hover{
+    box-shadow: 0 0 5px #A3CA50, 0 0 25px #cdee3a, 0 0 25px #A3CA50;
+}

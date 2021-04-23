@@ -11,10 +11,16 @@
     box-shadow: 7px 6px 9px 4px grey;
   }
   .formNote{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .fNote{
     border: solid rgb(0, 238, 255);
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    width: -webkit-fill-available;
   }
   .takeNote input{
     border: none;
@@ -26,4 +32,9 @@
     border: none;
     height: 150px;
     outline: none;
+  }
+  .buttonNote{
+    width: 25%;
+    height: 24px;
+    margin-top: 12px;
   }

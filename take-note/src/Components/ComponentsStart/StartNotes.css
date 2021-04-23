@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&family=Roboto:wght@500&display=swap');
+
+.startDad{
+    font-family:'Roboto', sans-serif;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28px;
+}
+.logoInicio{
+    width: 300px;
+    height: 300px;
+}
+.startForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.startForm input {
+    background-color: #F2F2F2;
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    width: 35vh;
+    height: 5vh;
+    margin-top: 22px;
+    border-radius: 20px 20px;
+    text-align: center;
+    border:none;
+}
+.formbutton{
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    border: solid palevioletred;
+    width: 50%;
+    height: 5vh;
+    margin-top: 22px;
+    border-radius: 20px 20px;
+}
+.iconos{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    
+}
+.iconos img {
+    margin-right: 35px;
+    margin-left: 35px;
+    width: 60px;
+    height: 60px;
+}
