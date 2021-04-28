@@ -1,0 +1,25 @@
+.nuwNote{
+    background-color: rgb(247 247 247 /76%);
+    position: absolute;
+    height: 100%;
+    top:0;
+    right:0;
+    left:0;
+    opacity:1;
+    transition: all 1s;
+    display: flex;
+    align-content: center;
+  };
+  
+.takeNote{
+    background-color:white;
+    padding: 10px 20px;
+    margin: auto;
+    position: sticky;
+    width: 440px;
+    height: 255px;
+    display: flex;
+    flex-flow: column;
+    border: solid yellow;
+    box-shadow: 7px 6px 9px 4px grey;
+  }

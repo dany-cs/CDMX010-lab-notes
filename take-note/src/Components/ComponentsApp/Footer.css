@@ -1,11 +1,11 @@
-.under{
+footer{
     background-image: url(../../image/fondoFooter.png);
     height: 14vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: -28%;
-    position: fixed;
+    /*position: fixed;*/
+    bottom: 0;
 }
 .logo{
     margin-top: 20px;

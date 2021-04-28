@@ -1,54 +1,54 @@
 import React, { useState } from 'react';
-import '../ComponentsApp/CreateNote.css';
-import { setCollection } from '../../firebase/FirebaseConfig';
+import '../ComponentsApp/CreateNote.css'
+import { db } from '../../firebase/FirebaseConfig';
 
-export const CreateNote = () => {
-    const [title, setTitle] = useState('');
-    const [notes, setNotes] = useState('');
-    const [error, setError] = useState('');
+export const CreateNote = (props) => {
+    const [title, setTitle] = useState(props.note ? props.note.title : "");
+    const [notes, setNotes] = useState(props.note ? props.note.notes : "");
 
     const setCreates = async (e) => {
-        e.preventDefault()
-        if (!title.trim()) {
-            setError('La nota no tiene un titulo')
-        }
-        if (!notes.trim()) {
-            setError('La nota no tiene contenido')
-        }
-        setCollection(title, notes)
-        setTitle('');
-        setNotes('');
-
-    }
+            if (props.note) {
+              const create = {
+                title: title,
+                notes: notes,
+              };
+              try {
+                await db.doc(`notas/${props.note.id}`).update(create);
+                console.log('nota añadida');
+          
+              } catch (e) {
+                console.log('nota no creada', e);
+              }
+              db.collection("notas");
+            }else {
+              const writeNotes = {
+                title: title,
+                notes: notes,
+              };
+              try {
+                await db.collection("notas").add(writeNotes);
+              }catch (e) {
+                console.log(e);
+              }
+            }   
+          };
+    
     
 
     return (
-        <div id="nuwNote" className="nuwNote">
-            <div className="takeNote">
-                <a href="#">X</a>
+            <div>
                 <form onSubmit={setCreates} className="formNote">
                     <div className="fNote">
                     <input value={title} onChange={(e) => { setTitle(e.target.value) }}
                         type="text"
-                        placeholder="Titulo..." />
+                        placeholder="Titulo..."></input>{" "}
                     <textarea value={notes} onChange={(e) => { setNotes(e.target.value) }}
-                        placeholder="Escribe tu nota..." />
+                        placeholder="Escribe tu nota..."></textarea>
                         </div>
                     <button className="buttonNote" type="submit">Crear Nota</button>
+                   
                 </form>
-                {
-                    error ?
-                        (<div>
-                            <p>{error}</p>
-                        </div>
-                        )
-                        :
-                        (
-                            <span></span>
-                        )
-                }
+                
             </div>
-
-        </div>
     )
 }

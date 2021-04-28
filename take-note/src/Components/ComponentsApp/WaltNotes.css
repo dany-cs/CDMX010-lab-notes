@@ -1,5 +1,28 @@
+h1{
+    text-align: center;
+}
+.wall{
+    width: 100%;
+    display: flex;
+    flex-wrap:  wrap;
+    height: 100%;
+}
 .dadNote{
-    width: 50%;
+    text-align: center;
+    width: 40%;
     border: solid chartreuse;
     margin: 2vh;
+}
+@media (max-width: 508px ) {
+    .dadNote{
+        text-align: center;
+        width: 100%;
+        border: solid palevioletred;
+        margin: 2vh;
+    }
+    
+}
+.boyNote{
+    margin: 5px;
+    border: dashed palevioletred; 
 }
