@@ -1,28 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&family=Roboto:wght@500&display=swap');
+ 
+.takeNote{
+  background-color:white;
+  padding: 10px 20px;
+  margin: auto;
+  position: sticky;
+  width: 440px;
+  height: 405px;
+  display: flex;
+  flex-flow: column;
+  border: solid #00ACEA;
+  box-shadow: 7px 6px 9px 4px grey;
+}
+
+@media (max-width: 508px ) {
+  .takeNote{
+      text-align: center;
+      width: 68%;
+      border: solid palevioletred;
+      margin: 2vh;
+  }
+  
+}
   .formNote{
     display: flex;
     flex-flow: column;
     align-items: center;
   }
   .fNote{
-    border: solid rgb(0, 238, 255);
+    border: solid #82E6CE;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     width: -webkit-fill-available;
+    font-family:'Roboto', sans-serif;
   }
+
   .takeNote input{
     border: none;
-    height: 35px;
+    height: 71px;
     outline: none;
     text-align: center;
+    font-size: xx-large;
+  }
+  @media (max-width: 508px ){
+    .takeNote input{
+      width: 80%;
+    }
   }
   .takeNote textarea{
     border: none;
-    height: 150px;
+    height: 230px;
     outline: none;
+    font-size: x-large;
+  }
+  @media (max-width: 508px ){
+    .takeNote textarea{
+      width: 80%;
+    }
   }
   .buttonNote{
-    width: 25%;
-    height: 24px;
-    margin-top: 12px;
+    width: 33%;
+    height: 35px;
+    margin-top: 17px;
+    border-radius: 20px 20px;
+    background-color: #A3CA50;
+    border: solid #00ACEA;
+    font-family:'Roboto', sans-serif;
+    font-size: large;
+    color: #443f3f;
   }
+  .buttonNote:hover{
+    box-shadow: 0 0 5px #A3CA50, 0 0 25px #cdee3a, 0 0 25px #A3CA50;
+  }
+  @media (max-width: 508px ){
+    .buttonNote{
+      width: 60%;
+  }
+}

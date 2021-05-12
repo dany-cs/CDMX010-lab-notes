@@ -2,6 +2,7 @@ import React from 'react';
 import '../componentsRegister/FormRegister.css';
 import logoform from '../../image/logoform.png';
 import register from '../../image/register.png';
+
 export const FormRegister = () => {
     return (
         <div className="register">

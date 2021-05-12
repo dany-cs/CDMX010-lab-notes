@@ -1,4 +1,4 @@
-footer{
+.footerNotes{
     background-image: url(../../image/fondoFooter.png);
     height: 14vh;
     width: 100%;
@@ -11,8 +11,4 @@ footer{
     margin-top: 20px;
     width: 120px;
     height: 120px;
-}
-.takes{
-    width: 67px;
-    margin-bottom: -92px;
 }

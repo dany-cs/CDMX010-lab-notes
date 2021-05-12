@@ -8,7 +8,7 @@ export const CreateNote = (props) => {
 
     const setCreates = async (e) => {
             if (props.note) {
-              const create = {
+              const create = {  
                 title: title,
                 notes: notes,
               };
@@ -45,7 +45,7 @@ export const CreateNote = (props) => {
                     <textarea value={notes} onChange={(e) => { setNotes(e.target.value) }}
                         placeholder="Escribe tu nota..."></textarea>
                         </div>
-                    <button className="buttonNote" type="submit">Crear Nota</button>
+                    <button className="buttonNote" type="submit">Guardar</button>
                    
                 </form>
                 

@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
 h1{
+    font-family: 'Ribeye Marrow', cursive;
     text-align: center;
 }
 .wall{
@@ -10,8 +12,29 @@ h1{
 .dadNote{
     text-align: center;
     width: 40%;
-    border: solid chartreuse;
     margin: 2vh;
+    display: flex;
+    align-items: center;
+}
+.dadNote:nth-child(1){
+    background-color: #FDEB01;
+}
+.dadNote:nth-child(2){
+    background-color: #CB79C6;
+    
+}
+.dadNote:nth-child(3){
+    background-color: #A3CA50;
+    
+}
+.dadNote:nth-child(4){
+    background-color: #82E6CE;
+}
+.dadNote:nth-child(5){
+    background-color: #F4C8C9;
+}
+.dadNote:nth-child(6){
+    background-color: #F37121;
 }
 @media (max-width: 508px ) {
     .dadNote{
@@ -23,6 +46,57 @@ h1{
     
 }
 .boyNote{
+    margin-top: 10px;
+    margin-left: 11px;
+    margin-bottom: 10px;
+    margin-right: 4px;
+    background-color: white;
+    border: dashed #0909099c;
+    width: 80%;
+    height: 26vh;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20%;
+    height: 97%;
     margin: 5px;
-    border: dashed palevioletred; 
+    
+}
+.icon button{
+    background-color: transparent;
+    outline-color: turquoise;
+    border-radius: 10px 20px
+}
+.icon img{
+    width: 43px;
+    height: 43px;
+}
+.footerNotes{
+    background-image: url(../../image/fondoFooter.png);
+    height: 14vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+}
+.logo{
+    margin-top: 20px;
+    width: 120px;
+    height: 120px;
+}
+.takes{
+    width: 67px;
+    margin-bottom: -92px;
+}
+.off{
+    width: 11%;
+    height: 51px;
+    margin-top: 53px;
+    background: pink;
+    outline: none;
+    border: dashed #0909099c;
+    border-radius: 20px 6px;
 }

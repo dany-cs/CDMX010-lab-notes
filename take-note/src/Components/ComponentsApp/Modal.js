@@ -7,7 +7,7 @@ export const Modal = (props) => {
         props.open && (
             <div className="nuwNote">
                 <div className="takeNote">
-                    <button onClick={props.onClose}>cerrar</button>
+                    <button className="close" onClick={props.onClose}>X</button>
                     <CreateNote note={props.note} />
 
                 </div>

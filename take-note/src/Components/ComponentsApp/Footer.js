@@ -4,7 +4,7 @@ import '../ComponentsApp/Footer.css';
 
 export const Footer = () => {
     return (
-        <footer>
+        <footer className="footerNotes">
             <img className="logo" src={take} alt="take"></img>
         </footer>
     )

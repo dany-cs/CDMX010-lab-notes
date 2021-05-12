@@ -1,33 +1,53 @@
-import React from 'react';
 import {Start} from './Start';
 import {Register} from './Register';
-import App from './App';
+import {App} from './App';
+
 
 import{
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
 } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import { auth } from './firebase/FirebaseConfig';
+import React from 'react'
+
 
 function Routes(){
+    const [user, setUser] = useState(null)
+
+    useEffect(()=>{
+        auth.onAuthStateChanged((user) => {
+            if(user) {  
+                setUser(user)
+        } else {
+                setUser(false)
+        }
+    })
+    }, [])
+
+
     return (
-        <Router>
-            <Link to="/register">Registro</Link>
-            <Link to="/App">Tus Notas</Link>
-            <Link to="/">Inicio</Link>
-            <Switch>
-                <Route exact path="/">
-                    <Start/>
-                </Route>
-                <Route path="/register">
-                    <Register/>
-                </Route>
-                <Route path="/App">
-                    <App/>
-                </Route>
-            </Switch>
-        </Router>
-    )
+        <div>
+            {user !== null ? (
+               <Router>
+               <div>
+                   <Switch>
+                       <Route exact path="/">
+                           <Start user={user}/>
+                       </Route>
+                       <Route path="/register">
+                           <Register user={user}/>
+                       </Route>
+                       <Route path="/app">
+                           <App user={user} />
+                       </Route>
+                   </Switch>
+                   </div>
+               </Router>
+            ) : <p>Loading ...</p>
+         }
+        </div>
+    );
 }
 export default Routes;
